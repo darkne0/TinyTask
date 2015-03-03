@@ -42,10 +42,8 @@ public class TinyTask<T> {
     }
 
     public void go() {
-        if(genericTask == null) {
-            genericTask = new GenericTask<>(this);
-            genericTask.execute();
-        }
+        genericTask = new GenericTask<>(this);
+        genericTask.execute();
     }
 
     public void cancel() {
